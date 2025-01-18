@@ -20,7 +20,7 @@ const style = `
 `
 
 const tailwindStyle = transformStyle(style)
-// ['text-[red] text-base']
+// ['text-[red]', 'text-base']
 
 const css = `
   .text-red {
