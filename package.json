@@ -1,7 +1,7 @@
 {
   "name": "transform-to-tailwind",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "packageManager": "pnpm@9.15.1",
   "description": "transform css/style to tailwind",
   "author": "Yong Yang",
