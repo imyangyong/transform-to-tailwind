@@ -1,0 +1,62 @@
+{
+  "name": "transform-to-tailwind",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@9.15.1",
+  "description": "transform css/style to tailwind",
+  "author": "Yong Yang",
+  "license": "MIT",
+  "homepage": "https://github.com/imyangyong/transform-to-tailwind#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imyangyong/transform-to-tailwind.git"
+  },
+  "bugs": "https://github.com/imyangyong/transform-to-tailwind/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup ./src/index.ts --format cjs,esm --dts --clean --minify",
+    "dev": "npm run build -- --watch src",
+    "format": "prettier --write --cache .",
+    "lint": "eslint . --cache",
+    "lint:fix": "pnpm run lint --fix",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "start": "tsx src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.14.0",
+    "@types/node": "^22.10.7",
+    "bumpp": "^9.10.1",
+    "eslint": "^9.18.0",
+    "prettier": "^3.4.2",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.2"
+  }
+}
