@@ -37,6 +37,7 @@ describe('transform', () => {
       background-color: transparent;
       font-size: 16px;
       text-decoration-color: #000;
+      font-weight: bold;
     `
 
     const conversionResult = transformStyle(cssCode)
@@ -52,6 +53,7 @@ describe('transform', () => {
         'bg-transparent',
         'text-base',
         '[text-decoration-color:#000]',
+        'font-bold',
       ],
     })
   })

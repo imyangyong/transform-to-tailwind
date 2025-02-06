@@ -956,6 +956,8 @@ export const moreDefaultValuesMap: Record<string, Record<string, string>> = {
     700: 'font-bold',
     800: 'font-extrabold',
     900: 'font-black',
+    normal: 'font-normal',
+    bold: 'font-bold',
   },
   'line-height': {
     '1': 'leading-none',
